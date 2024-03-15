@@ -10,18 +10,20 @@ function App() {
     setTodos(todos.filter((todo)=>todo.id!=id))
   }
 
+  
+
   return (
     <div className="app">
       <div className="mainHeading">
-        <h1>To Do App</h1>
+        <h1>To-Do List</h1>
       </div>
       <div className="subHeading">
         <br />
-        <h2>Nthelm Plan chyy mwonu </h2>
+        <h2>Make Your Day</h2>
       </div>
       <div className="input">
 
-        <input value={todo} onChange={(e)=>setTodo(e.target.value)} type="text" placeholder="🖊️ Ntha plan..." />
+        <input value={todo} onChange={(e)=>setTodo(e.target.value)} type="text" placeholder="🖊️ Add New..." />
         <i onClick={()=>setTodos([...todos, {id: Date.now(), text:todo, status:false}])} className="fas fa-plus"></i>
 
 
